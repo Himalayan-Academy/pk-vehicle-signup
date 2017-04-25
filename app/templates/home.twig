@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <link href='{{ base_url() }}/css/bulma.css' rel='stylesheet' type='text/css'>
         <link href='{{ base_url() }}/css/font-awesome.css' rel='stylesheet' type='text/css'>
+        <link href='{{ base_url() }}/css/alt.css' rel='stylesheet' type='text/css'>
         <script src="{{ base_url() }}/js/jquery.js"></script>
         <script src="{{ base_url() }}/js/wickedpicker.min.js"></script>
         <style>
@@ -52,6 +53,48 @@
                     <h2 class="subtitle">
                         This is <i>alpha</i> software, please report bugs to <a href="mailto:mayuran@hindu.org">Natyam Mayuranatha &mdash; Click here</a>.
                     </h2>
+
+<h3>
+
+<style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #29bc86;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+
+<div class="dropdown btn">
+  <span><a href="/"> Monk's Website Menu  </a> <font size="2px">(Tap again to hide)</font></span>
+  <div class="dropdown-content">
+  <li>  <a class="hvr-overline-from-center btn" href="http://agni.local/index.html">Home </a> </li>
+            <li> <a class="hvr-overline-from-center btn" href="http://agni.local/tnotes.html">Talaivar Notes </a> </li>
+            <li><a class="hvr-overline-from-center btn" href="http://agni.local/treatments.html">Calendar </a></li>
+            <li><a class="hvr-overline-from-center btn" href="http://agni.local/shortcodes.html">Festivals </a></li>
+            <li><a class="hvr-overline-from-center btn" href="http://agni.local/contact.html">Retreat Schedule </a></li>
+          <li>  <a class="hvr-overline-from-center btn" href="http://agni.local/panchang.html">Panchangam </a></li>
+          <li>  <a class="hvr-overline-from-center btn" href="https://docs.google.com/spreadsheets/d/1ur7Hb8LbmoqFqybGGfwt3c3WKDONyTzR_2ujPKJkdVE/edit#gid=0">Chiro List </a></li>
+          <li>  <a class="hvr-overline-from-center btn" href="http://agni.local/food.html">Food Schedule </a></li>
+          <li>  <a class="hvr-overline-from-center btn" href="http://agni.local/request.html">Feature Request</a></li>
+
+  </div>
+</div>
+
+
+
                 </div>
             </div>
         </section>
@@ -118,4 +161,3 @@
         <script src="{{ base_url() }}/js/app.js"></script>
     </body>
 </html>
-        
