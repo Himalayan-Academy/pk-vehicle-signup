@@ -271,3 +271,4 @@ var timepickerConfiguration = {
 };
 
 $(".timepicker").flatpickr(timepickerConfiguration);
+$(".datepicker").flatpickr();
