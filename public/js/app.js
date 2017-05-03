@@ -247,4 +247,3 @@ for(var i = 0; i<allAddButtons.length; i++) {
 }
 
 
-$('.timepicker').wickedpicker();
