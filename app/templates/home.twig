@@ -130,7 +130,7 @@
                         <ul>
                             {% for reservation in car.Reservations %}
                             <li class="is-car-reservation">
-                                <div class="is-hour-range">{{ reservation.start|date("H:i") }} - {{ reservation.end|date("H:i") }}</div>
+                                <div class="is-hour-range">{{ reservation.start|date("h:i A") }} - {{ reservation.end|date("h:i A") }}</div>
                                 <p>
                                     <i>{{ reservation.who }}</i> &mdash; {{ reservation.comment }}.
                                     <span class="is-edit-trigger"

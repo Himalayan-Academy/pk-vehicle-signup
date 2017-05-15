@@ -260,7 +260,7 @@ var timepickerConfiguration = {
     time_24hr: false, // AM/PM time picker is used by default
 
     // default format
-    dateFormat: "H:i",
+    dateFormat: "h:i K",
 
     // initial values for time. don't use these to preload a date
     defaultHour: 12,
