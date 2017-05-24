@@ -1,3 +1,12 @@
+#bannerimage {
+  width: 100%;
+  background-image: url(http://agni.local/images/vbanner.jpg);
+  height: 250px;
+  background-color: purple;
+  background-position: center;
+}
+
+
 a.hvr-overline-from-center {
   display: inline-block;
   vertical-align: middle;
@@ -74,5 +83,3 @@ a.hvr-overline-from-center:hover:before,a.hvr-overline-from-center:focus:before,
         {
             display: block;
         }
-
-        

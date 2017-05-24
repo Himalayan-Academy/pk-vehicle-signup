@@ -281,5 +281,5 @@ final class ReservationStore
 
     }
 
-    
+
 }
