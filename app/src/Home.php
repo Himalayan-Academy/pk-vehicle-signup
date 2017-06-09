@@ -6,6 +6,7 @@ use Psr\Log\LoggerInterface;
 use Slim\Http\Request;
 use Slim\Http\Response;
 
+date_default_timezone_set("Pacific/Honolulu");
 require_once "ReservationStore.php";
 use ReservationStore;
 use Exception;
