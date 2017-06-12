@@ -252,23 +252,8 @@ for(var i = 0; i<allAddButtons.length; i++) {
  */
 
 var timepickerConfiguration = {
-    enableTime: true,
-    noCalendar: true,
-
-    enableSeconds: false, // disabled by default
-
-    time_24hr: false, // AM/PM time picker is used by default
-
-    // default format
-    dateFormat: "h:i K",
-
-    // initial values for time. don't use these to preload a date
-    defaultHour: 12,
-    defaultMinute: 0
-
-    // Preload time with defaultDate instead:
-    // defaultDate: "3:30"
+    step: 30
 };
 
-$(".timepicker").flatpickr(timepickerConfiguration);
+$(".timepicker").timepicker(timepickerConfiguration);
 $(".datepicker").flatpickr();
