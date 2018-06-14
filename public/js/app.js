@@ -13,7 +13,7 @@ function displayNewReservationModal(ev) {
 
     // Making sure that we "deselect" all cars before showing the modal...
     var allCarOptions = document.querySelectorAll("#reservation-car option");
-    for(var i = 0; i<allCarOptions.length; i++) {
+    for (var i = 0; i < allCarOptions.length; i++) {
         allCarOptions[i].removeAttribute("selected");
     }
 
@@ -45,7 +45,7 @@ function displayNewReservationModal(ev) {
 
 
     modal.classList.add("is-active");
-    console.log("[MODAL] new sign up request",carName, currentDate);
+    console.log("[MODAL] new sign up request", carName, currentDate);
 }
 
 function displayEditReservationModal(ev) {
@@ -63,7 +63,7 @@ function displayEditReservationModal(ev) {
 
     // Making sure that we "deselect" all cars before showing the modal...
     var allCarOptions = document.querySelectorAll("#edit-reservation-car option");
-    for(var i = 0; i<allCarOptions.length; i++) {
+    for (var i = 0; i < allCarOptions.length; i++) {
         allCarOptions[i].removeAttribute("selected");
     }
 
@@ -128,7 +128,7 @@ function saveReservation() {
 
     document.querySelector("#reservation-modal-footer > span:nth-child(1) > i:nth-child(1)").classList.remove("is-hidden");
 
-    $.post("/signup/new", obj, function(data) {
+    $.post("/vehiclesignup/signup/new", obj, function (data) {
         console.log("[AJAX] /signup/new", data);
 
         if (data.status === "ok") {
@@ -163,7 +163,7 @@ function updateReservation() {
 
     document.querySelector("#edit-reservation-modal-footer > span:nth-child(1) > i:nth-child(1)").classList.remove("is-hidden");
 
-    $.post("/signup/update", obj, function(data) {
+    $.post("/vehiclesignup/signup/update", obj, function (data) {
         console.log("[AJAX] /signup/update", data);
 
         if (data.status === "ok") {
@@ -188,7 +188,7 @@ function removeReservation() {
 
     document.querySelector("#edit-reservation-modal-footer > span:nth-child(1) > i:nth-child(1)").classList.remove("is-hidden");
 
-    $.post("/signup/remove", obj, function(data) {
+    $.post("/vehiclesignup/signup/remove", obj, function (data) {
         console.log("[AJAX] /signup/remove", data);
 
         if (data.status === "ok") {
@@ -217,7 +217,7 @@ document.getElementById("is-remove-reservation-trigger").addEventListener("click
 
 var allAddButtons = document.querySelectorAll(".is-signup-trigger");
 
-for(var i = 0; i<allAddButtons.length; i++) {
+for (var i = 0; i < allAddButtons.length; i++) {
     allAddButtons[i].addEventListener("click", displayNewReservationModal);
 }
 
@@ -228,8 +228,8 @@ for(var i = 0; i<allAddButtons.length; i++) {
 
 var allCloseModalButtons = document.querySelectorAll(".has-modal-close-behavior");
 
-for(var i = 0; i<allCloseModalButtons.length; i++) {
-    allCloseModalButtons[i].addEventListener("click", function() {
+for (var i = 0; i < allCloseModalButtons.length; i++) {
+    allCloseModalButtons[i].addEventListener("click", function () {
         var modalId = this.getAttribute("data-modal");
         document.getElementById(modalId).classList.remove("is-active");
     });
@@ -242,7 +242,7 @@ for(var i = 0; i<allCloseModalButtons.length; i++) {
 
 var allAddButtons = document.querySelectorAll(".is-edit-trigger");
 
-for(var i = 0; i<allAddButtons.length; i++) {
+for (var i = 0; i < allAddButtons.length; i++) {
     allAddButtons[i].addEventListener("click", displayEditReservationModal);
 }
 
@@ -251,12 +251,12 @@ for(var i = 0; i<allAddButtons.length; i++) {
  * Initialize pickers
  */
 
- var timepickerConfiguration = {
-     step: 30,
-     disableTextInput: true,
-     'minTime': '6:00am',
+var timepickerConfiguration = {
+    step: 30,
+    disableTextInput: true,
+    'minTime': '6:00am',
     'maxTime': '6:00pm',
- };
+};
 
 $(".timepicker").timepicker(timepickerConfiguration);
 $(".datepicker").flatpickr();
