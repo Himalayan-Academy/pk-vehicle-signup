@@ -22,7 +22,7 @@ final class ReservationStore
         // get the next seven days
         $context = [ 'http' => [ 'method' => 'GET' ], 'ssl' => [ 'verify_peer' => false, 'allow_self_signed'=> true ] ];
         $context = stream_context_create($context);
-        $daysJson = file_get_contents("https://akasha.hindu.org:8080/days/14",false,$context);
+        $daysJson = file_get_contents("https://akasha.hindu.org:8080/days/180",false,$context);
         $this->days = json_decode($daysJson,true);
     }
 

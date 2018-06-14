@@ -1,0 +1,9 @@
+pk.soapdog.org   # Your site's address
+
+ext .html   # Clean URLs
+errors error.log {       # Error log
+    404 error-404.html   # Custom error page
+}
+
+# PHP backend
+fastcgi /blog localhost:9000 php
