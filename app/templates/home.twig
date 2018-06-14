@@ -81,6 +81,8 @@
 
         <br>
         <div class="container">
+            {% include 'signup-modal.twig' with days %}
+            {% include 'edit-modal.twig' with days %}
             {%  for day in days %}
             <div class="tile is-ancestor">
                 <div class="tile is-parent">
@@ -135,8 +137,7 @@
             </div>
             {%  endfor %}
         </div>
-        {% include 'signup-modal.twig' with days %}
-        {% include 'edit-modal.twig' with days %}
+       
 
     </body>
 </html>
