@@ -6,6 +6,9 @@ if (PHP_SAPI === 'cli-server' && $_SERVER['SCRIPT_FILENAME'] !== __FILE__) {
     return false;
 }
 
+// Report simple running errors
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
 require __DIR__ . '/../vendor/autoload.php';
 
 session_start();
